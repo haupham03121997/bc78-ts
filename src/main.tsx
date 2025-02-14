@@ -4,10 +4,12 @@ import './index.css';
 import App from './App.tsx';
 
 import config from './config';
+import { Provider } from 'react-redux';
+import store from './store';
 console.log('🔥 ~ config:', config);
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+  <Provider store={store}>
     <App />
-  </StrictMode>
+  </Provider>
 );
